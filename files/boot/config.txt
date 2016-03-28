@@ -1,0 +1,30 @@
+# For more options and information see
+# http://www.raspberrypi.org/documentation/configuration/config-txt.md
+# Some settings may impact device functionality. See link above for details
+
+# No need for GPU
+gpu_mem=16
+
+# just in case these PIs get plugged into monitors
+hdmi_safe=1
+
+# disable i2c, i2s, and spi on servers
+dtparam=i2c_arm=off
+dtparam=i2s=off
+dtparam=spi=off
+dtparam=audio=off
+
+#init_uart_baud=115200
+
+# default kernel
+kernel=kernel.img
+
+# Raspbery Pi 1 A, A+, B, B+ specific settings
+[pi1]
+
+# Raspbery Pi 2 (and 3?) specific settings
+[pi2]
+kernel=kernel7.img
+
+# Reset PI model filter
+[all]
