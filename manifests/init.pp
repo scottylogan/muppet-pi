@@ -37,8 +37,6 @@
 #
 class pi {
 
-  include muppet
-
   user { 'pi':
     ensure => absent,
   }
