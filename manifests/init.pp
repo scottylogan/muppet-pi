@@ -35,22 +35,44 @@
 #
 # Copyright 2016 Your name here, unless otherwise noted.
 #
-class muppet_pi {
-
-  # assumes that the setup script has removed the pi user
+class pi {
 
   include muppet
+
+  user { 'pi':
+    ensure => absent,
+  }
+
+  group { 'pi':
+    ensure => absent,
+  }
 
   file { '/boot/config.txt':
     ensure => present,
     source => "puppet:///modules/${module_name}/boot/config.txt",
     owner  => 'root',
     group  => 'root',
-    mode   => '0755',
+    mode   => '0644',
   }
   
   file { '/etc/hostname':
     ensure => absent,
+  }
+
+  file { '/etc/network/interfaces':
+    ensure => present,
+    source => "puppet:///modules/${module_name}/etc/network/interfaces",
+    owner  => 'root',
+    group  => 'root',
+    mode   => '0644',
+  }
+
+  file { '/etc/hosts':
+    ensure => present,
+    source => "puppet:///modules/${module_name}/etc/hosts",
+    owner  => 'root',
+    group  => 'root',
+    mode   => '0644',
   }
 
 }
