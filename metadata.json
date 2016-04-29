@@ -1,14 +1,13 @@
 {
-  "name": "scottylogan-muppets",
-  "version": "0.1.0",
-  "author": "scottylogan",
-  "summary": "Base configuration for Muppets",
-  "license": "Apache 2.0",
-  "source": "",
-  "project_page": null,
-  "issues_url": null,
+  "name": "muppet-pi",
+  "version": "0.1.1",
+  "author": "Scotty Logan <scotty@catbert.net>",
+  "summary": "Base configuration for a Pi muppet",
+  "license": "MIT",
+  "source": "https://github.com/scottylogan/muppet-pi.git",
+  "project_page": "https://github.com/scottylogan/muppet-pi",
+  "issues_url": "https://github.com/scottylogan/muppet-pi/issues",
   "dependencies": [
     {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
   ]
 }
-
